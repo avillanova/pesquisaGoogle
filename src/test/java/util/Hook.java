@@ -13,7 +13,6 @@ public class Hook {
     public void before(){
         System.setProperty("webdriver.chrome.driver", "webdriver/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--lang=en");
         options.addArguments("--lang=pt-br");
         driver = new ChromeDriver(options);
         driver.get("http://www.google.com.br/");
