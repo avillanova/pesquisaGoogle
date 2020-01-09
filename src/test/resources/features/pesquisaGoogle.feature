@@ -15,4 +15,4 @@ Feature: Pesquisa Google
     Examples:
     |intervalo            |
     |Na última semana        |
-    |1/01/2020 – 1/08/2020|
+    |12/30/2019 – 12/31/2019|

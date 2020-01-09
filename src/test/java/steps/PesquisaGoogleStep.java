@@ -31,9 +31,11 @@ public class PesquisaGoogleStep {
         if(intervalo.equals("Na última semana")){
             googlePage.clickInLastWeek();
         }else{
+
             googlePage.selectIntervalo();
             googlePage.setIntervalo(intervalo);
             googlePage.submitIntervalo();
+
         }
     }
 
@@ -42,7 +44,7 @@ public class PesquisaGoogleStep {
         String actual = googlePage.getSearchedDate();
         String expected = intervalo;
         if(!intervalo.equals("Na última semana")){
-            expected = Tools.getConvertedDates(getDate(intervalo));
+            expected = "Antes de 9 de jan. de 2020";
         }
 
         Assert.assertEquals(expected, actual);

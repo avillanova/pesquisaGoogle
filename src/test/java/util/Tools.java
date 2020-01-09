@@ -21,7 +21,7 @@ public class Tools {
 
     public static WebElement waitClickableBy(WebElement element) {
         try {
-            new WebDriverWait( Hook.getDriver(), 2 )
+            new WebDriverWait( Hook.getDriver(), 4 )
                     .until(  ExpectedConditions.elementToBeClickable( element ));
         }catch(Exception e){
             System.err.println(element+" Não encontrado....");
@@ -32,8 +32,8 @@ public class Tools {
 
     public static List<String> getDate(String intervalo){
         List<String> dates = new ArrayList<String>();
-        dates.add(intervalo.substring(0, 9));
-        dates.add(intervalo.substring(12, intervalo.length()));
+        dates.add(intervalo.substring(0, 10));
+        dates.add(intervalo.substring(12));
         return dates;
     }
 
